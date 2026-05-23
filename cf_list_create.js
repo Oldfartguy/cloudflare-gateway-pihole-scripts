@@ -75,9 +75,8 @@ await readFile(resolve(`./${blocklistFilename}`), (line, rl) => {
   // Remove prefixes and suffixes in hosts, wildcard or adblock format
   const domain = memoizedNormalizeDomain(_line);
 
-  // Check if it is a valid domain which is not a URL or does not contain
-  // characters like * in the middle of the domain
-  if (!isValidDomain(domain)) return;
+  // === ĐÃ BỎ QUA BƯỚC isValidDomain VÌ ĐÃ XỬ LÝ Ở BƯỚC 1 ===
+  // if (!isValidDomain(domain)) return;
 
   processedDomainCount++;
 
